@@ -2,12 +2,10 @@ function inicio() {
     let temperaturaCelsius;
     
     temperaturaCelsius = prompt("Ingrese la temperatura en grados Celsius:");
-
-   while (isNaN(temperaturaCelsius)) {
+    if (!temperaturaCelsius || isNaN(temperaturaCelsius)){
         alert("Por favor, ingrese un valor numérico.");
-        temperaturaCelsius = prompt("Ingrese la temperatura en grados Celsius:");
+        return inicio();
     }
-
  
     temperaturaCelsius = parseFloat(temperaturaCelsius);
 
